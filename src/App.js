@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Button } from './components/Button';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    const [count, setCount] = useState(0);
+    const [disabled, setDisabled] = useState(false);
+
+    return (
+        <div style={{ width: '800px', margin: 'auto' }}>
+
+            <h1 style={{ textAlign: 'center', fontFamily: 'Inter', fontSize: '4em' }}>{count}</h1>
+
+            <div style={{ margin: '20px', display: 'flex' }}>
+                <Button 
+                    disabled={disabled} 
+                    onClick={() => 
+                    setCount(count + 1)}>
+                    Incrementar
+                </Button>
+                <Button 
+                    color="secondary" 
+                    disabled={disabled} 
+                    onClick={() => setCount(count - 1)}>
+                    Decrementar
+                </Button>
+            </div>
+
+            <div style={{ margin: '20px' }}>
+                <Button color="secondary" 
+                    icon="refresh" 
+                    disabled={disabled} 
+                    onClick={() => setCount(0)}>
+                    Resetar
+                </Button>
+            </div>
+
+            <div style={{ margin: '20px' }}>
+                <Button 
+                    icon="check" 
+                    disabled={disabled} 
+                    onClick={() => setDisabled(true)}>
+                    Finalizar
+                </Button>
+            </div>
+
+            <div style={{ margin: '20px' }}>
+                <Button 
+                    onClick={() => setDisabled(false)}>
+                    Retomar
+                </Button>
+            </div>
+
+        </div>
+    );
 }
-
-export default App;
