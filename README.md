@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Criação de Component Button - Lemon Energia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este repositório foi criado para o teste de vaga Frontend Jr. da Lemon Energia 🍋
 
-## Available Scripts
+Nele você encontra a criação de um Componente Button
 
-In the project directory, you can run:
+## Para Começar.
+
+### `npm install`
+
+Ao clonar este repositório, execute `npm install` para adicionar todos os node_modules necessários para rodar em modo de desenvolvimento.
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Com este comando você inicia o app no modo de desenvolvimento.
+Abra [http://localhost:3000](http://localhost:3000) para ver em seu navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Nesta página você verá uma simples execução de um contador usando o Button que foi criado, eles recebem diferentes props para terem diferentes estilos.
 
-### `npm test`
+Obs: a página irá recarregar quando detectar qualquer mudança no código.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Onde Encontrar o Código do Componente.
 
-### `npm run build`
+O código do componente Button pode ser visto dentro da pasta components. Todos os SVGs utilizados podem ser encontrados na pasta assets, segue uma demonstração dos diretórios para exemplificar.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+───src
+   └───components
+       └───assets
+       └───Button.jsx
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Sobre o Código.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ele foi inteiramente construido utilizando Styled-Components.
 
-### `npm run eject`
+Todas as propriedades solicitadas estão presentes. ['color', 'icon', 'disabled'].
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Ainda falando sobre as props, foi usado propTypes para definir seus devidos valores default (color: 'primary', icon: none, disabled: false). Também foram realizados tratamentos de erros, caso uma própriedade receba um valor desconhecido.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Página Inicial.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Essa é uma página simples, com a intenção de somente demonstrar o funcionamento do componente que foi criado.
+Ao executar `npm start` você irá visualizar uma página com um contador e 5 botões que realizam diferentes ações.
+- Incrementar: aumenta o valor do contador.
+- Decrementar: diminui o valor do contador.
+- Resetar: volta o contador para zero.
+- Finalizar: encerra todas as ações que os botões poderiam realizar, atribuindo a propriedade disabled a eles.
+- Retomar: devolve as ações aos botões, retirando a propriedade disabled deles.
